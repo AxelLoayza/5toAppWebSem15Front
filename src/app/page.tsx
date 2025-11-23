@@ -20,9 +20,7 @@ export default function HomePage() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch(`${API_URL}/products`, {
-        cache: 'no-store',
-      });
+      const res = await fetch(`${API_URL}/products`);
 
       if (!res.ok) {
         setProducts([]);
